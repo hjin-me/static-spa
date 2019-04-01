@@ -1,0 +1,29 @@
+{
+  "name": "static-spa",
+  "version": "1.0.0",
+  "description": "https://developers.google.com/web/tools/puppeteer/articles/ssr",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "prepublish": "build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hjin-me/static-spa.git"
+  },
+  "author": "hjin-me",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hjin-me/static-spa/issues"
+  },
+  "homepage": "https://github.com/hjin-me/static-spa#readme",
+  "dependencies": {
+    "puppeteer": "^1.14.0"
+  },
+  "devDependencies": {
+    "@types/puppeteer": "^1.12.3",
+    "typescript": "^3.4.1",
+    "prettier": "^1.16.4"
+  }
+}
