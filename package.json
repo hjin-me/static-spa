@@ -3,9 +3,14 @@
   "version": "1.0.0",
   "description": "https://developers.google.com/web/tools/puppeteer/articles/ssr",
   "main": "index.js",
+  "bin": {
+    "static-spa": "./index.js"
+  },
   "scripts": {
-    "build": "tsc",
-    "prepublish": "build",
+    "prepublish": "tsc",
+    "prestart": "tsc",
+    "postinstall": "tsc",
+    "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,11 +24,14 @@
   },
   "homepage": "https://github.com/hjin-me/static-spa#readme",
   "dependencies": {
+    "command-line-args": "^5.1.1",
+    "fs-extra": "^7.0.1",
     "puppeteer": "^1.14.0"
   },
   "devDependencies": {
+    "@types/command-line-args": "^5.0.0",
     "@types/puppeteer": "^1.12.3",
-    "typescript": "^3.4.1",
-    "prettier": "^1.16.4"
+    "prettier": "^1.16.4",
+    "typescript": "^3.4.1"
   }
 }

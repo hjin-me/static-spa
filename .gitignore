@@ -1,5 +1,7 @@
 *.js
 .idea/
+chrome-mac
+dist
 # Logs
 logs
 *.log
