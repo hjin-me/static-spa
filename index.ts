@@ -36,7 +36,9 @@ async function ssr(
 
   const start = Date.now();
 
-  const opts: LaunchOptions = {};
+  const opts: LaunchOptions = {
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
+  };
   if (options.chromium) {
     opts.executablePath = options.chromium;
   }
