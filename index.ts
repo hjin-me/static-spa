@@ -49,7 +49,7 @@ async function ssr(
     // networkidle0 waits for the network to be idle (no requests for 500ms).
     // The page's JS has likely produced markup by this point, but wait longer
     // if your site lazy loads, etc.
-    await page.goto(url + '?ssr=true', { waitUntil: 'networkidle0' });
+    await page.goto(url + '?_origin=true', { waitUntil: 'networkidle0' });
     // await page.waitForSelector("#posts"); // ensure #posts exists in the DOM.
     links = await page.evaluate(() =>
       Array.from(document.querySelectorAll('[routerlink], a[href]'))
