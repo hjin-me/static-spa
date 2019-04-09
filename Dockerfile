@@ -49,5 +49,6 @@ RUN apt-get update; \
         xdg-utils\
         wget;
 COPY --from=builder /project/dist/ /project/
-COPY --from=builder /project/node_modules/puppeteer/.local-chromium /project/
-RUN ls -al /project
+COPY --from=builder /project/node_modules/puppeteer/.local-chromium /project/puppeteer/.local-chromium
+COPY static-spa /usr/local/bin/static-spa
+RUN chmod +x /usr/local/bin/static-spa
