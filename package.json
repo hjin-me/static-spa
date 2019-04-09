@@ -7,11 +7,10 @@
     "static-spa": "./index.js"
   },
   "scripts": {
-    "prepublish": "tsc",
     "prestart": "tsc",
-    "postinstall": "tsc",
     "start": "node .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ncc": "ncc"
   },
   "repository": {
     "type": "git",
@@ -31,6 +30,7 @@
   "devDependencies": {
     "@types/command-line-args": "^5.0.0",
     "@types/puppeteer": "^1.12.3",
+    "@zeit/ncc": "^0.17.4",
     "prettier": "^1.16.4",
     "typescript": "^3.4.1"
   }

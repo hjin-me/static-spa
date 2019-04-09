@@ -19,6 +19,11 @@
   dependencies:
     "@types/node" "*"
 
+"@zeit/ncc@^0.17.4":
+  version "0.17.4"
+  resolved "https://registry.npmjs.org/@zeit/ncc/-/ncc-0.17.4.tgz#19688f844efd9bbe49d0d361a6f518c6f1c32a6c"
+  integrity sha512-d931CjCTzfSC4VYDYgvvBTzhTGv7ExjumFTe8RVbXKAKoTjqOA8ZWDndqjSEbTeQTggyxCcCHm7HpZ28lScKnQ==
+
 agent-base@^4.1.0:
   version "4.2.1"
   resolved "https://registry.npmjs.org/agent-base/-/agent-base-4.2.1.tgz#d89e5999f797875674c07d87f260fc41e83e8ca9"
