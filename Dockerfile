@@ -1,7 +1,12 @@
-FROM node:lts
+FROM node:lts as builder
+WORKDIR /project
+COPY . /project/
+RUN yarn install && yarn build
+
+
+FROM node:lts-slim
 WORKDIR /project
 VOLUME /var/www
-COPY . /project/
 RUN apt-get update; \
     apt-get install -y --no-install-recommends \
         gconf-service\
@@ -43,4 +48,6 @@ RUN apt-get update; \
         lsb-release\
         xdg-utils\
         wget;
-RUN yarn install
+COPY --from=builder /project/dist/ /project/
+COPY --from=builder /project/node_modules/puppeteer/.local-chromium /project/
+RUN ls -al /project
