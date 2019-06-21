@@ -8,7 +8,7 @@ import commandLineArgs from 'command-line-args';
 
 const optionDefinitions: OptionDefinition[] = [
   { name: 'root', alias: 'd', type: String, defaultValue: '/var/www' },
-  { name: 'url', alias: 'u', type: String },
+  { name: 'url', alias: 'u', type: String, multiple: true },
   { name: 'chromium', alias: 'c', type: String }
 ];
 const options = commandLineArgs(optionDefinitions);
@@ -86,7 +86,7 @@ async function ssr(
 
 const visited = new Set<string>();
 const linkList: string[] = [];
-linkList.push(options.url);
+linkList.push(...options.url);
 
 function* asyncLinkList() {
   while (linkList.length > 0) {
